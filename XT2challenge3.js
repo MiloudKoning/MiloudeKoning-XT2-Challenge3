@@ -29,7 +29,7 @@ fetch('https://api.covid19api.com/summary')
   */
 
 
-// MAPBOX
+// MAPBOX met openWeather
 // API token
 mapboxgl.accessToken = 'pk.eyJ1IjoibWlsb3VkZWtvbmluZyIsImEiOiJjazhrM2lybmswMW9kM2ZudTNyamI1Y2V4In0.ezPR_2wToK7s2onIDhMmDA';
 
@@ -43,42 +43,6 @@ var map = new mapboxgl.Map({
 	//zoom 7 zodat je heel nederland ziet
 	zoom: 1,
 });
-
-
-//hij moet weten wat voor steden je wilt laten zien
-//in array met 6 objectjes met dezelfde keys
-//coordinates is array met 2 cijfers erin (let op volgorde!)
-var countries = [
-  {
-    name: 'Nederland',
-    coordinates: [5.291266, 52.132633]
-  },
-
-  {
-    name: 'Duitsland',
-    coordinates: [10.451526, 51.165691]
-  },
-
-  {
-    name: 'Zwitserland',
-    coordinates: [8.227512, 46.818188]
-  },
-
-  {
-    name: 'Italie',
-    coordinates: [12.56738, 41.87194]
-  },
-
-  {
-    name: 'Mexico',
-    coordinates: [-102.552784, 23.634501]
-  },
-
-  {
-    name: 'GrootBrittannie',
-    coordinates: [ -3.435973, 55.378051]
-  },
-];
 
 // url aangesproken wordt op openWeather
 var openWeatherMapUrl = 'https://api.openweathermap.org/data/2.5/weather';
@@ -136,6 +100,7 @@ function plotImageOnMap(icon, country) {
           }]
         }
       });
+      
       map.addLayer({
         id: "points_" + country.name,
         type: "symbol",
