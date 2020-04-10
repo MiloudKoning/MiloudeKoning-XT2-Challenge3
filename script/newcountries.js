@@ -163,10 +163,13 @@ var countries = [
     name: 'BT',
     coordinates: [ 90.433601, 27.514162]
   },
+  // klein eiland in zee
+  /*
   {
     name: 'BV',
     coordinates: [3.413194   , -54.423199 ]
   },
+  */
   {
     name: 'BW',
     coordinates: [ 24.684866, -22.328474  ]
@@ -311,10 +314,13 @@ var countries = [
     name: 'FJ',
     coordinates: [ 179.414413 , -16.578193  ]
   },
+  // klein eiland in zee
+  /*
   {
     name: 'FK',
     coordinates: [ -59.523613 , -51.796253  ]
   },
+  */
   {
     name: 'FM',
     coordinates: [ 150.550812 , 7.425554  ]
@@ -383,10 +389,13 @@ var countries = [
     name: 'GR',
     coordinates: [ 21.824312, 39.074208]
   },
+  // klein eiland in zee
+  /*
   {
     name: 'GS',
     coordinates: [ -36.587909 , -54.429579  ]
   },
+  */
   {
     name: 'GT',
     coordinates: [ -90.230759 ,15.783471   ]
