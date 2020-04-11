@@ -1,31 +1,44 @@
 var countries = [
   {
-    name: 'Nederland',
-    coordinates: [5.291266, 52.132633]
+    // SpaceX Seattle
+    name: 'Redmond',
+    coordinates: [-122.035494, 47.693214]
   },
 
   {
-    name: 'Duitsland',
-    coordinates: [10.451526, 51.165691]
+    // SpaceX Landing Zone 4
+    name: 'Lompoc',
+    coordinates: [-120.614561, 34.633670]
   },
 
   {
-    name: 'Zwitserland',
-    coordinates: [8.227512, 46.818188]
+    // SpaceX
+    name: 'Hawthorne',
+    coordinates: [-118.328263, 33.921285]
   },
 
   {
-    name: 'Italie',
-    coordinates: [12.56738, 41.87194]
+    // SpaceX Space Launch Facility
+    name: 'Brownsville',
+    coordinates: [-97.180926, 25.993464]
   },
 
   {
-    name: 'Mexico',
-    coordinates: [-102.552784, 23.634501]
+    // SpaceX Rocket Development Facility
+    name: 'McGregor',
+    coordinates: [-97.437303, 31.434422]
   },
 
   {
-    name: 'GrootBrittannie',
-    coordinates: [ -3.435973, 55.378051]
+    // SpaceX Landing Zone 1 & 2
+    name: 'Cape Canaveral',
+    coordinates: [-80.601714, 28.610747]
   },
+
+  {
+    // SpaceX Washington DC
+    name: 'Washington',
+    coordinates: [-77.024999, 38.901388]
+  },
+
 ];

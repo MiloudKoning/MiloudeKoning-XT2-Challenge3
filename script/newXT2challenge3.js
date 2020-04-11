@@ -39,9 +39,9 @@ var map = new mapboxgl.Map({
 	// eigen stijl voor kaart
 	style: 'mapbox://styles/mapbox/streets-v11',
 	// 
-	center: [-7.844656, 28.258614],
+	center: [-96.4247, 31.51073],
 	//zoom 7 zodat je heel nederland ziet
-	zoom: 1,
+	zoom: 2,
 });
 
 // url aangesproken wordt op openWeather
@@ -116,3 +116,98 @@ function plotImageOnMap(icon, country) {
   );
 }
 
+/*
+function getAPIdata() {
+  var city = 'the%20Hague,nl';
+
+  // opbouwen request
+  var request = openWeatherMapUrl + '?' + 'appid=' + openWeatherMapUrlApiKey + '&' + 'q=' + city;
+
+  // get current weather
+  fetch(request)  
+  // parse response to JSON format
+  .then(function(response) {
+    if(!response.ok) throw Error(response.statusText);
+    return response.json();
+  })
+  // do something with response
+  .then(function(response) {
+    // show full JSON object
+    console.log(response);
+    //document.getElementById('weather').innerHTML = response;
+    document.getElementById('weather').innerHTML = response.weather[0].description;
+  })
+  // catch error
+  .catch(function (error) {
+    console.log('Request failed', error);
+  });
+}
+*/
+
+function tooltips() {
+  map.on('load', function () {
+  map.addSource('places', {
+    'type': 'geojson',
+    'data': {
+      'type': 'FeatureCollection',
+      'features': tooltipLocations
+    }
+  });
+
+  // Add a layer showing the places.
+  map.addLayer({
+    'id': 'places',
+    'type': 'symbol',
+    'source': 'places',
+    'layout': {
+      'icon-image': '{icon}-15',
+      'icon-allow-overlap': true
+    }
+  });
+
+  // Create a popup, but don't add it to the map yet.
+  //popup
+  var popup = new mapboxgl.Popup({
+    //niet nodig want is hover
+    closeButton: false,
+    closeOnClick: false
+  });
+
+//als je op de kaart met je muis over een van de places gaat, DAN moet je iets gaan doen (geef 'e' mee)
+// e is de locatie waar je over heen hovert
+  map.on('mouseenter', 'places', function (e) {
+    //slice is dathij het eerste deel pakt?
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var description = e.features[0].properties.description;
+
+    // Populate the popup and set its coordinates based on the feature found.
+    popup
+    //wat je uiteindelijk wilt voor de pop-up
+      .setLngLat(coordinates)
+      .setHTML(description)
+      .addTo(map);
+  });
+
+  //als je met je muis weer weggaat gaat de popup ook weg
+  map.on('mouseleave', 'places', function () {
+    popup.remove();
+  });
+});
+}
+
+/*
+
+var popup = new mapboxgl.Popup()
+   .setHTML('<h3>De Haagse Hogeschool</h3><p>Is momenteel dicht.</p>');
+
+// // Adding a marker based on lon lat coordinates
+new mapboxgl.Marker()
+  //met puntjes kan je het er meteen achter die new zetten
+   .setLngLat([4.324439, 52.067200])
+   .setPopup(popup)
+   //voeg hem toe op de app, anders weet hij niet waar hij hem moet plaatsen
+   .addTo(map);
+*/
+
+//getAPIdata();
+tooltips();
