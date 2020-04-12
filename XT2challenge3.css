@@ -1,6 +1,11 @@
+@import url("https://use.typekit.net/ylg0ybk.css");
+
 body {
-  background: #efefef;
+  background: #141414;
   margin: 0;
+  font-family: 'brandon-grotesque', 'sans-serif';
+  color: #FFFFFF;
+
 }
 #map {
   height: 100vh;
@@ -9,4 +14,36 @@ body {
 
 .hidden {
 	display: none;
+}
+
+/*media quaries*/
+/*tablet*/
+@media only screen and (min-width: 480px) and (max-width: 991px){
+
+}
+
+/*desktop*/
+@media only screen and (min-width: 992px){
+	body {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.info {
+		display: flex;
+		justify-content: center;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	#map {
+	  height: 80vh;
+	  width: 50vw;
+
+	  margin-top: 3em;
+	  margin-bottom: 1em;
+	  
+	}
 }

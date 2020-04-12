@@ -54,11 +54,11 @@ var openWeatherMapUrlApiKey = '6a719e3c4dfb752cbb9fe577d9c14591';
 // alles binnen {} wordt uitgevoerd zodra kaart geladen is
 map.on('load', function() {
   // hiermee door de array heen loopen
-  countries.forEach(function(country) {
+  locations.forEach(function(location) {
 
     // uiteindelijke url
     // [0] of [1] voor eerste of tweede waarde in array
-    var request = openWeatherMapUrl + '?' + 'appid=' + openWeatherMapUrlApiKey + '&lon=' + country.coordinates[0] + '&lat=' + country.coordinates[1];
+    var request = openWeatherMapUrl + '?' + 'appid=' + openWeatherMapUrlApiKey + '&lon=' + location.coordinates[0] + '&lat=' + location.coordinates[1];
 
     // hieronder huidige weer ophalen aan de hand van coördinaten van de landen
     // then then catch structuur
@@ -68,7 +68,7 @@ map.on('load', function() {
         return response.json();
       })
       .then(function(response) {
-        plotImageOnMap(response.weather[0].icon, country)
+        plotImageOnMap(response.weather[0].icon, location)
       })
       .catch(function(error) {
         console.log('ERROR', error);
@@ -76,7 +76,7 @@ map.on('load', function() {
   });
 });
 
-function plotImageOnMap(icon, country) {
+function plotImageOnMap(icon, location) {
   map.loadImage(
     // openWeather map zelf plaatje opbouwen ofzo url idk
     'http://openweathermap.org/img/w/' + icon + '.png',
@@ -85,9 +85,9 @@ function plotImageOnMap(icon, country) {
       if (error) throw error;
       // naam die je hieronder geeft tussen "" moet uniek zijn omdat je loopt
       // daarom _city.name (bijv. weatherIcon_Nederland)
-      map.addImage("weatherIcon_" + country.name, image);
+      map.addImage("weatherIcon_" + location.name, image);
       // source toevoegen
-      map.addSource("point_" + country.name, {
+      map.addSource("point_" + location.name, {
         type: "geojson",
         data: {
           type: "FeatureCollection",
@@ -95,20 +95,20 @@ function plotImageOnMap(icon, country) {
             type: "Feature",
             geometry: {
               type: "Point",
-              coordinates: country.coordinates
+              coordinates: location.coordinates
             }
           }]
         }
       });
       
       map.addLayer({
-        id: "points_" + country.name,
+        id: "points_" + location.name,
         type: "symbol",
         // verwijst naar map.addSource
-        source: "point_" + country.name,
+        source: "point_" + location.name,
         layout: {
           //nog een variabele naam voor de source
-          "icon-image": "weatherIcon_" + country.name,
+          "icon-image": "weatherIcon_" + location.name,
           "icon-size": 1.3
         }
       });

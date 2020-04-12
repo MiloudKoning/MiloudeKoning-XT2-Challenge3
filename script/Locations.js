@@ -1,4 +1,4 @@
-var countries = [
+var locations = [
   {
     // SpaceX Seattle
     name: 'Redmond',
