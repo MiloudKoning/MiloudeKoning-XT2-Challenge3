@@ -4,9 +4,8 @@ body {
   background: #141414;
   margin: 0;
   font-family: 'brandon-grotesque', 'sans-serif';
-  color: #FFFFFF;
-
 }
+
 #map {
   height: 100vh;
   width: 100vw;
@@ -28,24 +27,29 @@ body {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
+	}
+
+	.info h1 {
+		color: #FFFFFF;
 	}
 
 	.info {
 		display: flex;
 		justify-content: center;
-	}
-
-	h1 {
-		
+		background-color: #1D1D1D;
+		border-radius: 3em;
+		padding: 3em;
+		margin-left: 15%;
 	}
 
 	#map {
-	  height: 75vh;
-	  width: 50vw;
-
+	  height: 70vh;
+	  width: 45vw;
+	  /*border-radius: 2em;*/
 	  margin-top: 7em;
 	  margin-bottom: 7em;
-	  margin-right: 7em
+	  margin-right: 7em;
 	  
 	}
 }
