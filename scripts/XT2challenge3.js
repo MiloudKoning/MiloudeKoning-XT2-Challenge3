@@ -79,7 +79,7 @@ map.on('load', function() {
 function plotImageOnMap(icon, location) {
   map.loadImage(
     // openWeather map zelf plaatje opbouwen ofzo url idk
-    'http://openweathermap.org/img/w/' + icon + '.png',
+    'https://openweathermap.org/img/w/' + icon + '.png',
 
     function (error, image) {
       if (error) throw error;
