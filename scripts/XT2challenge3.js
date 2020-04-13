@@ -41,7 +41,7 @@ var map = new mapboxgl.Map({
 	// 
 	center: [-98.583333, 39.833333],
 	//zoom 7 zodat je heel nederland ziet
-	zoom: 3.5,
+	zoom: 2.5,
 });
 
 // url aangesproken wordt op openWeather

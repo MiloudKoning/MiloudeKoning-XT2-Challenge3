@@ -43,43 +43,156 @@ body {
 }
 */
 
-/*
-/*media quaries*
-/*tablet*
-@media only screen and (min-width: 480px) and (max-width: 991px){
-
-}
-
-/*desktop*
-@media only screen and (min-width: 992px){
-	body {
+body {
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+		flex-direction: column;
+		/*justify-content: space-between;*/
 		align-items: center;
-	}
-
-	.info h1 {
-		color: #FFFFFF;
+		justify-content: center;
+		height: 100%;
+		overflow: hidden;
 	}
 
 	.info {
-		display: flex;
+		color: #FFFFFF;
+		text-align: center;
+	}
+
+	.info h1, .info p {
+		/*display: flex;
 		justify-content: center;
 		background-color: #1D1D1D;
 		border-radius: 3em;
 		padding: 3em;
-		margin-left: 15%;
+		margin-left: 15%;*/
+		margin: 0;
+	}
+
+	.info h1 {
+		font-size: 1.8em;
+	}
+
+	.info p {
+		font-size: 1em;
+		margin-bottom: 1.2em;
+	}
+
+	.logo img {
+		width: 40%;
+		margin-left: 1.7em; /*door die X van SpaceX lijkt het anders of het logo niet gecentreerd staat*/
+		/*margin-top: 1em;*/
+	}
+
+	#map {
+	  height: 85vh;
+	  width: 100vw;
+	  /*border-radius: 2em;*/
+	  /*margin-top: 5em;*/
+	  /*margin-bottom: 7em;*/
+	  /*margin-right: 7em;*/
+	}
+
+/*media quaries*/
+@media only screen and (max-width: 480px){
+	/*in een mediaquerie want anders op elke schermgrootte niet zichtbaar*/
+	.logo img {
+		display: none;
+	}
+}
+
+/*tablet*/
+@media only screen and (min-width: 480px) and (max-width: 991px){
+	body {
+		display: flex;
+		flex-direction: column;
+		/*justify-content: space-between;*/
+		align-items: center;
+		justify-content: center;
+	}
+
+	.info {
+		color: #FFFFFF;
+		text-align: center;
+	}
+
+	.info h1, .info p {
+		/*display: flex;
+		justify-content: center;
+		background-color: #1D1D1D;
+		border-radius: 3em;
+		padding: 3em;
+		margin-left: 15%;*/
+		margin: 0;
+	}
+
+	.info h1 {
+		font-size: 3em;
+	}
+
+	.info p {
+		font-size: 1.1em;
+	}
+
+	.logo img {
+		width: 30%;
+		margin-left: 1.7em; /*door die X van SpaceX lijkt het anders of het logo niet gecentreerd staat*/
+		margin-top: 1em;
+	}
+
+	#map {
+	  height: 60vh;
+	  width: 80vw;
+	  /*border-radius: 2em;*/
+	  margin-top: 5em;
+	  /*margin-bottom: 7em;*/
+	  /*margin-right: 7em;*/
+	}
+}
+
+/*desktop*/
+@media only screen and (min-width: 992px){
+	body {
+		display: flex;
+		flex-direction: row;
+		/*justify-content: space-between;*/
+		align-items: center;
+		justify-content: center;
+	}
+
+	.info {
+		color: #FFFFFF;
+		text-align: center;
+	}
+
+	.info h1, .info p {
+		/*display: flex;
+		justify-content: center;
+		background-color: #1D1D1D;
+		border-radius: 3em;
+		padding: 3em;
+		margin-left: 15%;*/
+		margin: 0;
+	}
+
+	.info h1 {
+		font-size: 3em;
+	}
+
+	.info p {
+		font-size: 1.1em;
+	}
+
+	.logo img {
+		width: 50%;
+		margin-left: 1.7em; /*door die X van SpaceX lijkt het anders of het logo niet gecentreerd staat*/
 	}
 
 	#map {
 	  height: 70vh;
-	  width: 45vw;
-	  /*border-radius: 2em;*
-	  margin-top: 7em;
-	  margin-bottom: 7em;
+	  width: 60vw;
+	  /*border-radius: 2em;*/
+	  margin-top: 9em;
+	  /*margin-bottom: 7em;*/
 	  margin-right: 7em;
-	  
 	}
 }
-*/
