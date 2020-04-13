@@ -37,11 +37,11 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWlsb3VkZWtvbmluZyIsImEiOiJjazhrM2lybmswMW9kM
 var map = new mapboxgl.Map({
 	container: 'map',
 	// eigen stijl voor kaart
-	style: 'mapbox://styles/mapbox/streets-v11',
+	style: 'mapbox://styles/miloudekoning/ck8yczi4g49x71ipb4qgsljkt',
 	// 
-	center: [-96.4247, 31.51073],
+	center: [-98.583333, 39.833333],
 	//zoom 7 zodat je heel nederland ziet
-	zoom: 2,
+	zoom: 3.5,
 });
 
 // url aangesproken wordt op openWeather
@@ -195,6 +195,31 @@ function tooltips() {
 });
 }
 
+//zoekbalk
+map.addControl(
+  new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+  })
+);
+
+//zoom en rotatie
+map.addControl(new mapboxgl.NavigationControl());
+
+// Center the map on the coordinates of any clicked symbol from the 'symbols' layer.
+map.on('click', 'places', function(e) {
+map.flyTo({ center: e.features[0].geometry.coordinates });
+});
+
+// Change the cursor to a pointer when the it enters a feature in the 'symbols' layer.
+map.on('mouseenter', 'places', function() {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+});
 /*
 
 var popup = new mapboxgl.Popup()
