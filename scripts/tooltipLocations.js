@@ -1,3 +1,5 @@
+// Locaties waar de pop-up moet verschijnen (+ de welke booschap etc.)
+
 tooltipLocations = [{
     'type': 'Feature',
     'properties': {

@@ -1,3 +1,5 @@
+// locaties (van SpaceX) waar het weer uit de OpenWeather API getoond moet worden
+
 var locations = [
   {
     // SpaceX Seattle
