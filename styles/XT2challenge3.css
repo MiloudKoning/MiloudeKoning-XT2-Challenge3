@@ -1,14 +1,14 @@
 @import url("https://use.typekit.net/ylg0ybk.css");
 
 body {
-  background: #141414;
-  margin: 0;
-  font-family: 'brandon-grotesque', 'sans-serif';
+	background: #141414;
+	margin: 0;
+	font-family: 'brandon-grotesque', 'sans-serif';
 }
 
 #map {
-  height: 100vh;
-  width: 100vw;
+	height: 100vh;
+	width: 100vw;
 }
 
 .hidden {
@@ -16,25 +16,25 @@ body {
 }
 
 .mapboxgl-popup-content {
-  padding: 15px;
-  color: #fff;
-  background-color: #1A1A1A;
-  font-family: 'brandon-grotesque', 'sans-serif';
-  text-align: center;
-  box-shadow: 3px 3px 2px #272727;
+	padding: 15px;
+	color: #fff;
+	background-color: #1A1A1A;
+	font-family: 'brandon-grotesque', 'sans-serif';
+	text-align: center;
+	box-shadow: 3px 3px 2px #272727;
 }
 
 .mapboxgl-popup-content h1 {
-  font-style: italic;
-  margin: 0;
+	font-style: italic;
+	margin: 0;
 }
 
 .mapboxgl-popup-content p {
-  margin: 0;
+	margin: 0;
 }
 
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
-  border-top-color: #1A1A1A;
+	border-top-color: #1A1A1A;
 }
 
 @media only screen and (max-width: 480px){
