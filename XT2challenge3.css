@@ -21,7 +21,7 @@ body {
   background-color: #1A1A1A;
   font-family: 'brandon-grotesque', 'sans-serif';
   text-align: center;
-  box-shadow: 3px 3px 2px #3C3C3C;
+  box-shadow: 3px 3px 2px #272727;
 }
 
 .mapboxgl-popup-content h1 {
