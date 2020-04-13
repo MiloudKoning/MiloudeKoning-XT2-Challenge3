@@ -204,7 +204,10 @@ map.addControl(
 );
 
 //zoom en rotatie
-map.addControl(new mapboxgl.NavigationControl());
+var nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'bottom-right');
+
+//map.addControl(new mapboxgl.NavigationControl());
 
 // Center the map on the coordinates of any clicked symbol from the 'symbols' layer.
 map.on('click', 'places', function(e) {
