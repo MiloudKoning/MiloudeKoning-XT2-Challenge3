@@ -1,7 +1,7 @@
 tooltipLocations = [{
     'type': 'Feature',
     'properties': {
-      'description': '<strong>SpaceX Seattle, Redmond</strong><p></p>',
+      'description': '<h1>Redmond</h1><p>SpaceX Seattle</p>',
       'icon': 'marker'
     },
     'geometry': {
@@ -12,7 +12,7 @@ tooltipLocations = [{
   {
     'type': 'Feature',
     'properties': {
-      'description': '<strong>SpaceX Landing Zone 4, Lompoc</strong><p></p>',
+      'description': '<h1>Lompoc</h1><p>SpaceX Landing Zone 4</p>',
       'icon': 'marker'
     },
     'geometry': {
@@ -23,7 +23,7 @@ tooltipLocations = [{
   {
     'type': 'Feature',
     'properties': {
-      'description': '<strong>SpaceX, Hawthorne</strong><p></p>',
+      'description': '<h1>Hawthorne</h1><p>SpaceX</p>',
       'icon': 'marker'
     },
     'geometry': {
@@ -34,7 +34,7 @@ tooltipLocations = [{
   {
     'type': 'Feature',
     'properties': {
-      'description': '<strong>SpaceX Space Launch Facility, Brownsville</strong><p></p>',
+      'description': '<h1>Brownsville</h1><p>SpaceX Space Launch Facility</p>',
       'icon': 'marker'
     },
     'geometry': {
@@ -45,7 +45,7 @@ tooltipLocations = [{
   {
     'type': 'Feature',
     'properties': {
-      'description': "<strong>SpaceX Rocket Development Facility, McGregor</strong><p></p>",
+      'description': "<h1>McGregor</h1><p>SpaceX Rocket Development Facility</p>",
       'icon': 'marker'
     },
     'geometry': {
@@ -56,7 +56,7 @@ tooltipLocations = [{
   {
     'type': 'Feature',
     'properties': {
-      'description': "<strong>SpaceX Landing Zone 1 and 2, Cape Canaveral</strong><p></p>",
+      'description': "<h1>Cape Canaveral</h1><p>SpaceX Landing Zone 1 and 2</p>",
       'icon': 'marker'
     },
     'geometry': {
@@ -67,7 +67,7 @@ tooltipLocations = [{
   {
     'type': 'Feature',
     'properties': {
-      'description': '<strong>SpaceX, Washington DC</strong><p></p>',
+      'description': '<h1>Washington DC</h1><p>SpaceX</p>',
       'icon': 'marker'
     },
     'geometry': {
